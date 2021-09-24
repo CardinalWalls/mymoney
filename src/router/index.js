@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 import Money from "../views/Money";
 import Statistics from "../views/Statistics";
 import Labels from "../views/Labels";
@@ -10,11 +9,6 @@ Vue.use(VueRouter)
 const routes = [
     {
         path: '/',
-        name: 'Home',
-        component: Home
-    },
-    {
-        path: '/Money',
         name: 'Money',
         component: Money
     },
