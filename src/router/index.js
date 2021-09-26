@@ -10,11 +10,15 @@ Vue.use(VueRouter)
 const routes = [
     {
         path: '/',
+        redirect: '/Money'
+    },
+    {
+        path: '/Money',
         name: 'Money',
         component: Money
     },
     {
-        path: '/Label',
+        path: '/Labels',
         name: 'Label',
         component: Labels
     },
@@ -23,11 +27,7 @@ const routes = [
         name: 'Statistics',
         component: Statistics
     },
-    {
-        path: '/*',
-        name: 'NotFound',
-        component: NotFound
-    },
+
     {
         path: '/about',
         name: 'About',
@@ -35,7 +35,12 @@ const routes = [
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-    }
+    },
+    {
+        path: '/*',
+        name: 'NotFound',
+        component: NotFound
+    },
 ]
 
 const router = new VueRouter({
