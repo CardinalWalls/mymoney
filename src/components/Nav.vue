@@ -3,7 +3,11 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
     |
-    <router-link to="/Money">记账</router-link>
+    <router-link to="/Money">记账
+      <svg>
+        <use xlink:href="#labels" />
+      </svg>
+    </router-link>
     |
     <router-link to="/Labels">图标</router-link>
     |
@@ -12,6 +16,9 @@
 </template>
 
 <script lang="ts">
+import x from "@/assets/icons/labels.svg"
+console.log(x)
+
 export default {
   name: 'Nav'
 };
